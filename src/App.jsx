@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div className="mx-auto text-center">
       <Header />
-      {/* <UserInput /> */}
+      <UserInput />
     </div>
   );
 };

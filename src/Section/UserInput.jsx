@@ -56,11 +56,6 @@ const UserInput = ({ onChangeInput, userInput }) => {
             required
           />
         </div>
-        <div className="w-full mt-4">
-          <button className="btn-style" type="button">
-            Calculate
-          </button>
-        </div>
       </form>
     </section>
   );

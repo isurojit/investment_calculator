@@ -1,22 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-const UserInput = () => {
-  const [userInput, setUserInput] = useState({
-    initialInvestment: 10000,
-    annualInvestment: 1000,
-    expectedReturn: 5,
-    duration: 10,
-  });
-
-  //All the functions will be connected
-  const handleChange = (inputIdentifier, newValue) => {
-    setUserInput((prevState) => {
-      return {
-        ...prevState,
-        [inputIdentifier]: newValue,
-      };
-    });
-  };
+const UserInput = ({ onChangeInput, userInput }) => {
   return (
     <section className="w-full max-w-lg mx-auto mt-4">
       <form className="form-control">
@@ -29,7 +13,7 @@ const UserInput = () => {
             id="initialInvestment"
             type="number"
             value={userInput.initialInvestment}
-            onChange={(e) => handleChange("initialInvestment", e.target.value)}
+            onChange={(e) => onChangeInput("initialInvestment", e.target.value)}
             required
           />
         </div>
@@ -42,7 +26,7 @@ const UserInput = () => {
             id="annualInvestment"
             type="number"
             value={userInput.annualInvestment}
-            onChange={(e) => handleChange("annualInvestment", e.target.value)}
+            onChange={(e) => onChangeInput("annualInvestment", e.target.value)}
             required
           />
         </div>
@@ -55,7 +39,7 @@ const UserInput = () => {
             id="expectedReturn"
             type="number"
             value={userInput.expectedReturn}
-            onChange={(e) => handleChange("expectedReturn", e.target.value)}
+            onChange={(e) => onChangeInput("expectedReturn", e.target.value)}
             required
           />
         </div>
@@ -68,13 +52,13 @@ const UserInput = () => {
             id="duration"
             type="number"
             value={userInput.duration}
-            onChange={(e) => handleChange("duration", e.target.value)}
+            onChange={(e) => onChangeInput("duration", e.target.value)}
             required
           />
         </div>
         <div className="w-full mt-4">
           <button className="btn-style" type="button">
-            Submit
+            Calculate
           </button>
         </div>
       </form>

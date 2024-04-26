@@ -8,13 +8,22 @@
     url("./assets/fonts/Ubuntu-Regular.ttf") format("truetype");
 }
 
+/* Custom styles to center the table */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin: auto;
+}
+
 @layer components {
   .input-style {
     @apply appearance-none border rounded w-full py-2 px-3 text-white bg-gray-600 leading-tight text-lg;
   }
 
   .form-control {
-    @apply bg-gray-800 shadow-md rounded px-1 pt-6 pb-8 mb-4 flex flex-wrap text-white;
+    @apply bg-gray-800 shadow-md rounded  pt-6 pb-8 mb-4 flex flex-wrap text-white;
   }
 
   .label-style {
@@ -27,6 +36,14 @@
 
   .input-container {
     @apply mb-4 ml-5 w-full md:w-5/12 md:pr-2;
+  }
+
+  .table-header {
+    @apply border px-4 py-2 bg-gray-800 text-white text-center;
+  }
+
+  .table-description {
+    @apply border px-4 py-2 text-center text-white;
   }
 }
 

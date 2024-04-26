@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Ubuntu";
+  src: local("Ubuntu"),
+    url("./assets/fonts/Ubuntu-Regular.ttf") format("truetype");
+}
+
+body {
+  animation: gradientAnimation 5s ease infinite;
+  background-image: linear-gradient(to top, #270370c0, #291c1cab, #540000a5);
+  background-attachment: fixed;
+  font-family: Ubuntu, sans-serif;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

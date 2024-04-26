@@ -1,7 +1,14 @@
 import React from "react";
+import Header from "./Section/Header";
+import UserInput from "./Section/UserInput";
 
 const App = () => {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <div className="mx-auto text-center">
+      <Header />
+      {/* <UserInput /> */}
+    </div>
+  );
 };
 
 export default App;

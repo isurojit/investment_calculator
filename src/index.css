@@ -19,7 +19,7 @@
 
 @layer components {
   .input-style {
-    @apply appearance-none border rounded w-full py-2 px-3 text-white bg-gray-600 leading-tight text-lg;
+    @apply appearance-none border rounded w-full py-2 px-3 text-white bg-gray-600 leading-tight text-xl;
   }
 
   .form-control {
@@ -35,7 +35,7 @@
   }
 
   .input-container {
-    @apply mb-4 ml-5 w-full md:w-5/12 md:pr-2;
+    @apply mb-4 ml-5 w-[90%] md:w-5/12 md:pr-2;
   }
 
   .table-header {

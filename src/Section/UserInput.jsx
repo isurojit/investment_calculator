@@ -2,7 +2,7 @@ import React from "react";
 
 const UserInput = ({ onChangeInput, userInput }) => {
   return (
-    <section className="w-full max-w-lg mx-auto mt-4">
+    <section className="w-full max-w-lg sm:w-1/2 mx-auto mt-4">
       <form className="form-control">
         <div className="input-container">
           <label className="label-style" htmlFor="initialInvestment">

@@ -20,7 +20,7 @@ const App = () => {
       const updatedValue = newValue === "" ? "" : +newValue;
       return {
         ...prevState,
-        [inputIdentifier]: +updatedValue,
+        [inputIdentifier]: updatedValue,
       };
     });
   };
